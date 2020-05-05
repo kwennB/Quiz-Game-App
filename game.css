@@ -1,0 +1,106 @@
+h3#score{ 
+    background-color:#23323C;
+    color:#fff;
+    font-size:19px; 
+    width:20%; 
+    border-radius:8px; 
+    margin-left:45%; 
+    text-align:center;
+}
+
+h2{
+    background-color:#feda6a; 
+    border:1px solid; 
+    color:#1d1e22; 
+    border-radius:30px; 
+    position:center; 
+    width:30%; 
+    margin-left:40%; 
+    text-align:center;
+}
+
+body{
+    background-color:#1d1e22;
+    color:#d4d4dc;
+}
+
+div#quiz{ 
+    border:#262626 2px solid;
+    background-color:#393f4d; 
+    padding:8px 30px 30px 30px; 
+    border-radius:5%; 
+    width:30%; 
+    margin-left:38%;
+}
+
+button { 
+    padding-top: 3px; 
+    padding-bottom: 3px; 
+    background-color: #feda6a; 
+    color:#1d1e22; 
+    text-align: center;
+    font-size: 19px;
+    width: 20%; 
+    height: 40px; 
+    border-radius: 10px; 
+    border-style: none;
+}
+
+button:hover { 
+    background-color: #262626; 
+    color:#fff;
+}
+
+p{
+    border:2px solid #d4d4dc; 
+    width:50%; 
+    padding:5px; 
+    border-radius:12px; 
+    text-align:center;
+}
+
+p:hover{
+    border:2px solid #d4d4dc;
+    background-color:#393939; 
+    width:50%; 
+    padding:4px; 
+    border-radius:12px; 
+    text-align:center;
+}
+
+.score{
+    border:2px solid #ec7f37; 
+    width:50%; 
+    padding:5px; 
+    border-radius:12px; 
+    text-align:center;
+}
+.score:hover{
+    border:2px solid; 
+    background-color:#ff5a09; 
+    width: 50%; 
+    padding:5px; 
+    border-radius:12px; 
+    text-align:center;
+}
+
+input[type="radio"]{
+    visibility:hidden;
+}
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #ad5942;
+    width: 100%;
+    text-align: center;
+}
+/*footer{
+    background-color:#feda6a; 
+    border:1px solid; 
+    color:#1d1e22; 
+    border-radius:2px; 
+    width:100%;
+    text-align:center;
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quiz game</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="game.css">
+</head>
+<body>
+	<b id="color"></b>
+	<h2 id="quiz_status"></h2> <div id="score"></div>
+	<div id="quiz"></div><br/><br/>
+<script>
+var pos = 0, quiz, quiz_status, question, choice, choices, chA, chB, chC,correct=0;
+
+var questions =[
+[ "Who proposed the idea of the World Wide Web?", "Tim Berners-Lee", "Hue Nelson", "Paul Otlet", "A"],
+[ "What was the first tool ever used to design for the web?", "Adobe Photoshop", "Dreamweaver", "Figma", "A"],
+[ "Who sings better?", "Khalid", "Cardi B", "Drake", "A"],
+[ "Which is the greatest series of time?", "Prison Break", "Game of Thrones", "Money Heist", "B"],
+[ "Which of these is a declarative language?", "Java", "Ruby", "HTML", "C"]
+];
+
+function _(x){
+	return document.getElementById(x);}
+function renderQuestion(){
+	quiz = _("quiz");
+	if(pos >= questions.length){
+	quiz.innerHTML="<center><h3 class='score'>You got "+correct+" of "+questions.length+" question correct</h3><button onclick='location.reload();'>RETRY</button></center>"
+	_("quiz_status").innerHTML = "Test Completed";
+		pos = 0;
+		correct = 0;
+		return false;
+		}
+		_("quiz_status").innerHTML = "Question " +(pos+1)+ " of " +questions.length;
+	question = questions[pos][0];
+	chA = questions[pos][1];
+	chB = questions[pos][2];
+	chC = questions[pos][3];
+	quiz.innerHTML = "<h3 align='center'>"+question+"</h3>";
+	quiz.innerHTML += " <label><p id='aa'>A.<input type='radio' name='choices' value='A' onclick='checkAnswer()'>"+chA+"</p></label><br>";
+	quiz.innerHTML += " <label><p id='bb'>B.<input type='radio' name='choices' value='B' onclick='checkAnswer()'> "+chB+"</p></label><br>";
+	quiz.innerHTML += "<label><p id='cc'>C.<input type='radio' name='choices' value='C' onclick='checkAnswer()' > "+chC+"</p></label><br><br>";
+	quiz.innerHTML += "<center><button onclick='next()'>NEXT</button></center>";
+	}
+	
+	function checkAnswer(){
+	choices = document.getElementsByName("choices");
+	
+	for(var i=0; i<choices.length; i++){
+		if(choices[i].checked){
+			choice = choices[i].value;
+		}
+		
+		if(choices[i].value == "A" && "A" == questions[pos][4] ){
+		color.innerHTML ="<style> #aa {border:2px solid #fff; background-color:green; width:50%; padding:5px; border-radius:12px; text-align:center;}#cc {border:2px solid #fff; background-color:red; width:50%; padding:5px; border-radius:12px; text-align:center;} #bb {border:2px solid #fff; background-color:red; width:50%; padding:5px; border-radius:12px; text-align:center;}</style>";
+		} else if(choices[i].value == "B" && "B" == questions[pos][4]){
+		color.innerHTML ="<style> #bb {border:2px solid #fff; background-color:green; width:50%; padding:5px; border-radius:12px; text-align:center;} #aa {border:2px solid #fff; background-color:red; width:50%; padding:5px; border-radius:12px; text-align:center;} #cc {border:2px solid #fff; background-color:red; width:50%; padding:5px; border-radius:12px; text-align:center;}</style>";
+		}
+		else if(choices[i].value == "C" && "C" == questions[pos][4]){
+		color.innerHTML ="<style> #cc {border:2px solid #fff; background-color:green; width:50%; padding:5px; border-radius:12px; text-align:center;} #aa {border:2px solid #fff; background-color:red; width:50%; padding:5px; border-radius:12px; text-align:center;} #bb {border:2px solid #fff; background-color:red; width:50%; padding:5px; border-radius:12px; text-align:center;}</style>";
+		}
+		
+		
+	}
+	}function next(){if(choice == questions[pos][4]){
+	correct++;
+	score.innerHTML = "<h3 id=score>Your score: "+correct*20+"%</h3>";}
+	
+	color.innerHTML ="<style> #cc {border:2px solid #fff; background-color:; width:50%; padding:5px; border-radius:12px; text-align:center;} #aa {border:2px solid #fff; background-color:; width:50%; padding:5px; border-radius:12px; text-align:center;} #bb {border:2px solid #fff; background-color:; width:50%; padding:5px; border-radius:12px; text-align:center;}</style>";
+		
+	pos++;
+	renderQuestion();}
+window.addEventListener("load", renderQuestion, false);
+</script>
+<footer>
+	KwennB Copyright &copy; 2020 
+</footer>
+</body>
+</html>
