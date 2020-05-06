@@ -127,6 +127,9 @@ footer {
     h3#score{
       width: 50%;
     }
+    p#aa, p#bb, p#cc{
+        width: 100%;
+    }
     
 }
 
