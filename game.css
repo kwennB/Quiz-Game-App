@@ -1,3 +1,8 @@
+body{
+    background: url(./images/freevector.jpg) no-repeat;
+    background-size: cover;
+
+}
 h3#score{ 
     background-color:#23323C;
     color:#fff;
@@ -96,11 +101,6 @@ footer {
     width: 100%;
     text-align: center;
 }
-/*footer{
-    background-color:#feda6a; 
-    border:1px solid; 
-    color:#1d1e22; 
-    border-radius:2px; 
-    width:100%;
-    text-align:center;
+
+
 

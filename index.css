@@ -1,6 +1,8 @@
 :root{
     background-color: #2e3031;
     font-size: 62.5%;
+    background: url(./images/freevector.jpg) no-repeat;
+    background-size: cover;
 }
 
 *{
@@ -9,13 +11,14 @@
     margin: 0;
     padding: 0;
     color: rgb(168, 158, 97);
+    
 }
 h1, h2, h3, h4{
     margin-bottom: 1rem;
 }
 h1{
     font-size: 5.5rem;
-    color: #392ce9a6;
+    color: #f01936a6;
     margin-bottom: 5rem;
 }
 
@@ -64,14 +67,16 @@ h3{
 /* BUTTONS */
 .btn{
     font-size: 1.8rem;
+    font-weight: bold;
     padding: 1rem 0;
     width: 20rem;
     text-align: center;
     border: 0.1rem solid #3926e9;
+    border-radius: 3px;
     margin-bottom: 1rem;
     text-decoration: none;
-    color: #3926e9;
-    background-color: rgb(53, 6, 6);
+    color: #e92626;
+    background-color: rgb(221, 205, 205);
 }
 
 .btn:hover{
