@@ -102,5 +102,21 @@ footer {
     text-align: center;
 }
 
+/* Media Queries */
+@media (max-width: 960px){
+    div#quiz{
+        width: 100%;
+        align-items: center;
+        margin-left: 5%;
+    }
+}
 
+@media (max-width: 520px){
+    h2{
+        width: 50%;
+    }
+    div#quiz{
+        width: 85%;
+    }
+}
 
