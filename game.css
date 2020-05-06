@@ -118,5 +118,15 @@ footer {
     div#quiz{
         width: 85%;
     }
+    button{
+      width: 100%; 
+    }
+    .score{
+      width: 100%;
+    }
+    h3#score{
+      width: 50%;
+    }
+    
 }
 
