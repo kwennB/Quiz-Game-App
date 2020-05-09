@@ -93,3 +93,12 @@ h3{
 }
 
 
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #ad5942;
+    width: 100%;
+    text-align: center;
+}
